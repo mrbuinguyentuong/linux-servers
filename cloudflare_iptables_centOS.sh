@@ -11,13 +11,13 @@ firewall-cmd --permanent --zone=public --add-port={80/tcp,443/tcp}
 firewall-cmd --reload > /dev/null
 
 
-firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="61.28.230.155" port port="22" protocol="tcp" accept'
+firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="0.0.0.0" port port="22" protocol="tcp" accept'
 
 
 
-firewall-cmd --permanent --zone=drop --add-rich-rule='rule family="ipv4" source address="61.28.227.6" port port="22" protocol="tcp" accept'
+firewall-cmd --permanent --zone=drop --add-rich-rule='rule family="ipv4" source address="0.0.0.1" port port="22" protocol="tcp" accept'
 
-firewall-cmd --permanent --zone=drop --add-rich-rule='rule family="ipv4" source address="61.28.227.63" port port="22" protocol="tcp" accept'
+firewall-cmd --permanent --zone=drop --add-rich-rule='rule family="ipv4" source address="0.0.0.2" port port="22" protocol="tcp" accept'
 
 
 
